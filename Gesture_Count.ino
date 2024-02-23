@@ -109,21 +109,21 @@ void loop() {
         break;
 
       case GESTURE_RIGHT:
-      // checks if up_count = 2
-      // and if down_count = 2
-      // and if left_count = 2
-      // and if right_count value is 0 or 1
+      // verifies up_count = 2
+      // verifies down_count = 2
+      // verifies left_count = 2
+      // verifies right_count value is 0 or 1
         if (up_count == 2 && down_count == 2 && left_count == 2 && right_count == 0 || right_count == 1) {
           Serial.println("Correct");
             if (right_count == 0) {
-              // prints string confirmation of gesture pattern and increments left_count
+              // prints string confirmation of gesture pattern and increments right_count
               Serial.println("OOOOOOOX");
               right_count += 1;}
               else{
                 Serial.println("OOOOOOOO");
                 Serial.println("You did it!");
                 right_count += 1;}
-            // breaks the if loop when pattern successfully entered
+            // breaks the IF loop when pattern successfully entered
             break;}
             else {
               // prints if a non-right gesture is detected and resets all counts
